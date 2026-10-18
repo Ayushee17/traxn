@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Contact · Traxn</title>
+<meta name="description" content="Start a conversation with Traxn. Tell us where you are, what you're trying to achieve and what's getting in the way.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.aside{display:grid;gap:18px}
+.aside .card{gap:8px}
+.aside .card h3{font-size:18px}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<main>
+  <section class="phero">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a><span>/</span><span>Contact</span></p>
+      <h1>Let's talk about what comes next.</h1>
+      <p class="lede">Tell us where you are, what you're trying to achieve, and what's getting in the way. We'll start there.</p>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap contact">
+      <div class="aside">
+        <div class="card"><h3>What happens next</h3><p>We read what you've sent and reply within two working days with a 30-minute call slot, or with a plain answer if we're not the right fit.</p></div>
+        <div class="card"><h3>What to expect on the call</h3><p>No pitch. We'll ask about your customers, your numbers and what you've tried, and tell you what we'd look at first.</p></div>
+        <div class="card"><h3>Other ways to reach us</h3><p>Bengaluru, India.<br><a class="link" href="https://www.linkedin.com/in/ayushigupta-pmm/" target="_blank" rel="noopener">Message Ayushi on LinkedIn ↗</a></p></div>
+      </div>
+
+      <form class="form" id="contact-form" novalidate>
+        <div class="row">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" type="text" autocomplete="name" required><span class="err">Enter your name.</span></div>
+          <div class="field"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@company.com" required><span class="err">Enter a valid work email.</span></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required><span class="err">Enter your company name.</span></div>
+          <div class="field"><label for="f-site">Website</label><input id="f-site" name="website" type="url" placeholder="https://" autocomplete="url"><span class="err">Enter a URL starting with https://</span></div>
+        </div>
+        <div class="field">
+          <label for="f-challenge">Primary challenge</label>
+          <select id="f-challenge" name="challenge" required>
+            <option value="">Choose one</option>
+            <option>Buyers don't understand what we do</option>
+            <option>Launching a new product</option>
+            <option>Entering a new market (India, US, UK, GCC)</option>
+            <option>Activity but no pipeline growth</option>
+            <option>AI assistants don't mention us</option>
+            <option>Something else</option>
+          </select>
+          <span class="err">Choose the challenge closest to yours.</span>
+        </div>
+        <div class="field">
+          <label for="f-context">Goals and timing <small>(optional)</small></label>
+          <textarea id="f-context" name="context" placeholder="What are you trying to achieve, by when, and what have you already tried?"></textarea>
+        </div>
+        <div class="field">
+          <label style="display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:14.5px;color:var(--ink-2)"><input id="f-consent" name="consent" type="checkbox" style="width:auto;margin-top:4px" required><span>I agree that Traxn may store these details to respond to my enquiry. We don't share them with anyone else, and you can ask us to delete them at any time.</span></label>
+          <span class="err">Please tick the consent box so we can reply.</span>
+        </div>
+        <div><button class="btn btn-primary" type="submit">Start the conversation ↗</button></div>
+      </form>
+
+      <div class="sent" id="sent" hidden>
+        <h3>Thanks. Here's your message.</h3>
+        <p>This site is in preview, so the form doesn't send yet. Copy the text below and send it to Ayushi on <a class="link" href="https://www.linkedin.com/in/ayushigupta-pmm/" target="_blank" rel="noopener">LinkedIn</a>, and we'll reply within two working days.</p>
+        <pre id="sent-text"></pre>
+        <div><button class="btn btn-ghost" type="button" id="copy-btn">Copy message</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('contact-form'), sent = document.getElementById('sent'), out = document.getElementById('sent-text');
+  function field(id){ return document.getElementById(id); }
+  function wrap(el){ return el.closest('.field'); }
+  function valid(el){
+    if (el.type === 'checkbox') return el.checked;
+    if (el.required && !el.value.trim()) return false;
+    if (el.type === 'email' && el.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value)) return false;
+    if (el.type === 'url' && el.value && !/^https?:\/\//i.test(el.value)) return false;
+    return true;
+  }
+  var ids = ['f-name','f-email','f-company','f-site','f-challenge','f-consent'];
+  ids.forEach(function(id){ var el = field(id); el.addEventListener('input', function(){ wrap(el).setAttribute('data-invalid','false'); }); el.addEventListener('change', function(){ wrap(el).setAttribute('data-invalid','false'); }); });
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var ok = true, first = null;
+    ids.forEach(function(id){ var el = field(id); var v = valid(el); wrap(el).setAttribute('data-invalid', v ? 'false' : 'true'); if (!v) { ok = false; if (!first) first = el; } });
+    if (!ok) { first.focus(); return; }
+    var txt = 'Enquiry for Traxn\n' +
+      'Name: ' + field('f-name').value.trim() + '\n' +
+      'Work email: ' + field('f-email').value.trim() + '\n' +
+      'Company: ' + field('f-company').value.trim() + (field('f-site').value ? ' (' + field('f-site').value.trim() + ')' : '') + '\n' +
+      'Primary challenge: ' + field('f-challenge').value + '\n' +
+      (field('f-context').value.trim() ? 'Goals and timing: ' + field('f-context').value.trim() + '\n' : '');
+    out.textContent = txt;
+    form.hidden = true; sent.hidden = false; sent.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+  document.getElementById('copy-btn').addEventListener('click', function(){
+    var b = this, t = out.textContent;
+    function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy message'; }, 1800); }
+    function fallback(){ var r = document.createRange(); r.selectNodeContents(out); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected. Press Ctrl/Cmd+C'; }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(done, fallback); else fallback();
+  });
+})();
+</script>
+</body>
+</html>

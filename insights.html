@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Insights · Traxn</title>
+<meta name="description" content="Traxn's writing on positioning and differentiation, go-to-market and market strategy, B2B demand generation, AI search and discovery, and marketing analysis.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.themes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.themes button{font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--line);background:var(--card);color:var(--ink-2);border-radius:999px;padding:8px 16px;cursor:pointer}
+.themes button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.post .status{font-size:12px;font-family:var(--mono);color:var(--ink-2)}
+.post .next{font-size:14px;color:var(--orange);font-weight:700}
+.cats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.cat{border-top:3px solid var(--orange);padding-top:12px;display:grid;gap:4px;font-size:14.5px;min-width:0}
+.cat b{font-family:var(--display);font-size:16px}
+.cat span{color:var(--ink-2)}
+@media (max-width:980px){.cats{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.cats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+<main>
+  <section class="phero">
+    <div class="wrap">
+      <p class="crumb"><a href="index.html">Home</a><span>/</span><span>Insights</span></p>
+      <h1>Thinking we've put in writing.</h1>
+      <p class="lede">Fewer pieces, more depth. Everything here is written by the person who does the client work, carries a date and an author, uses real examples, and ends with a next step. We publish when we have something to say, not on a schedule.</p>
+    </div>
+  </section>
+
+  <section class="sec alt">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Five themes</p><h2>What we write about, and why.</h2></div>
+      <div class="cats">
+        <div class="cat"><b>Positioning and differentiation</b><span>Demonstrate strategic expertise</span></div>
+        <div class="cat"><b>GTM and market strategy</b><span>Reach founders and business leaders</span></div>
+        <div class="cat"><b>B2B demand generation</b><span>Show practical commercial thinking</span></div>
+        <div class="cat"><b>AI, search and discovery</b><span>Address emerging changes in marketing</span></div>
+        <div class="cat"><b>Marketing analysis</b><span>Build an original point of view</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="themes" role="group" aria-label="Filter by theme">
+        <button type="button" data-t="all" aria-pressed="true">All</button>
+        <button type="button" data-t="pos" aria-pressed="false">Positioning</button>
+        <button type="button" data-t="gtm" aria-pressed="false">GTM and markets</button>
+        <button type="button" data-t="dem" aria-pressed="false">Demand generation</button>
+        <button type="button" data-t="ai" aria-pressed="false">AI and discovery</button>
+        <button type="button" data-t="ana" aria-pressed="false">Analysis</button>
+      </div>
+      <p class="notice" style="margin-bottom:22px"><b>Status.</b><span>Traxn is new and these pieces are being written. Each card shows the argument and what the piece will contain; the full article, author and publication date appear when it's published.</span></p>
+      <div class="posts" id="posts">
+        <article class="post" data-t="pos" id="positioning-three-segments">
+          <span class="k">Positioning and differentiation</span>
+          <h3>Why "we serve three segments" usually means you serve none</h3>
+          <p>The maths of focus for a small team: how splitting attention across segments quietly halves the win rate in each, with a worked example from a composite SaaS company and a way to choose the first segment in an afternoon.</p>
+          <span class="status">Ayushi Gupta · In preparation</span>
+          <a class="next" href="positioning.html">Related service: positioning →</a>
+        </article>
+        <article class="post" data-t="gtm" id="india-to-us">
+          <span class="k">GTM and market strategy</span>
+          <h3>The five things that change when an Indian SaaS company sells to the US</h3>
+          <p>Alternatives, proof, pricing anchors, buying committees and tone. A checklist from the Understand stage, with the questions to ask before the first US campaign.</p>
+          <span class="status">Ayushi Gupta · In preparation</span>
+          <a class="next" href="gtm.html">Related service: go-to-market →</a>
+        </article>
+        <article class="post" data-t="dem" id="measure-small-team">
+          <span class="k">B2B demand generation</span>
+          <h3>Measurement for a marketing team that can't afford a data stack</h3>
+          <p>How a 12-person team can connect content, outbound and events to pipeline with one CRM field, one question on the first call and a spreadsheet. Includes the template.</p>
+          <span class="status">Ayushi Gupta · In preparation</span>
+          <a class="next" href="demand.html">Related service: demand generation →</a>
+        </article>
+        <article class="post" data-t="ai" id="ai-answers">
+          <span class="k">AI, search and discovery</span>
+          <h3>What happens when the buyer asks ChatGPT instead of Google</h3>
+          <p>How assistants decide which vendors to name, which sources they lean on, what that means for content, and a simple way to measure your own visibility each quarter without over-reading the result.</p>
+          <span class="status">Ayushi Gupta · In preparation</span>
+          <a class="next" href="ai-search.html">Related service: AI search visibility →</a>
+        </article>
+        <article class="post" data-t="ai" id="ai-category-study">
+          <span class="k">AI, search and discovery</span>
+          <h3>Study: what AI assistants say about three B2B SaaS categories</h3>
+          <p>Findings from our prompt study across contract management, HR tech and customer support software for Indian and UK buyers, with the full prompt set so you can re-run it.</p>
+          <span class="status">Ayushi Gupta · Research in progress</span>
+          <a class="next" href="case-studies.html#research">See the method →</a>
+        </article>
+        <article class="post" data-t="ana" id="cheap-average">
+          <span class="k">Marketing analysis</span>
+          <h3>AI made average marketing free. Here's what got more expensive.</h3>
+          <p>An argument: when content and strategy decks cost nothing, the scarce inputs become customer evidence, a real choice about focus and an opinion worth citing. What that means for how marketing teams should be built.</p>
+          <span class="status">Ayushi Gupta · In preparation</span>
+          <a class="next" href="about.html">Related: our perspective →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="wrap">
+      <div class="final">
+        <p class="eyebrow">Talk it through</p>
+        <h2>Reading about it is one thing. Want to apply it to your company?</h2>
+        <p>Tell us which piece prompted the question and what your situation looks like.</p>
+        <div class="row"><a class="btn btn-primary" href="contact.html">Start a conversation ↗</a><a class="btn btn-ghost" href="https://www.linkedin.com/in/ayushigupta-pmm/" target="_blank" rel="noopener">Follow Ayushi on LinkedIn ↗</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+(function(){
+  var btns = document.querySelectorAll('.themes button'), posts = document.querySelectorAll('#posts .post');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      btns.forEach(function(x){ x.setAttribute('aria-pressed','false'); });
+      b.setAttribute('aria-pressed','true');
+      var t = b.getAttribute('data-t');
+      posts.forEach(function(p){ p.hidden = !(t === 'all' || p.getAttribute('data-t') === t); });
+    });
+  });
+})();
+</script>
+</body>
+</html>

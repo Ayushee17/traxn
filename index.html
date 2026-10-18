@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Traxn</title>
+<meta name="description" content="Traxn is a founder-led marketing strategy consultancy in Bengaluru. Positioning, go-to-market strategy, demand generation and AI search visibility for B2B SaaS and AI companies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero{padding-block:clamp(44px,6vw,84px) clamp(36px,5vw,60px)}
+.hero .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:clamp(28px,5vw,64px);align-items:center}
+.hero h1{font-size:clamp(40px,5.6vw,72px);font-weight:700;margin:16px 0 20px}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero .fine{margin-top:18px;font-size:14px;color:var(--ink-2);display:flex;flex-wrap:wrap;gap:6px 18px}
+.hero .fine span::before{content:"✓ ";color:var(--orange);font-weight:700}
+.portrait{position:relative;justify-self:center;width:min(100%,360px)}
+.portrait .frame{aspect-ratio:4/5;border-radius:24px;overflow:hidden;background:var(--peach-soft);max-width:100%}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.portrait .tag{position:absolute;left:-16px;bottom:24px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 14px;font-size:14px;line-height:1.35}
+.portrait .tag strong{display:block;font-family:var(--display);font-size:16px}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr}.portrait{width:min(100%,260px);justify-self:start}.portrait .tag{left:0}}
+.beliefs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.belief{display:grid;gap:10px;padding:26px;border-radius:var(--radius);background:var(--card);border:1px solid var(--line);min-width:0}
+.belief .n{font-family:var(--mono);font-size:13px;color:var(--orange);font-weight:600}
+.belief h3{font-size:24px}
+.belief p{color:var(--ink-2);font-size:16px}
+@media (max-width:900px){.beliefs{grid-template-columns:1fr}}
+.who{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,4vw,56px);align-items:start}
+.who ul{list-style:none;padding:0;display:grid;gap:12px}
+.who li{display:grid;grid-template-columns:28px 1fr;gap:12px;font-size:17px}
+.who li::before{content:"→";color:var(--orange);font-weight:700}
+.who .not{background:var(--bg-2);border-radius:var(--radius);padding:24px;display:grid;gap:10px}
+.who .not h3{font-size:20px}
+.who .not p{color:var(--ink-2);font-size:16px}
+@media (max-width:900px){.who{grid-template-columns:1fr}}
+.proof{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:800px){.proof{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="site-nav"></div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Marketing strategy consultancy · Bengaluru</p>
+        <h1>Marketing that starts with <em>better questions.</em></h1>
+        <p class="lede">Traxn helps B2B SaaS and AI companies understand their customers, sharpen their positioning and build go-to-market plans that turn into pipeline.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="contact.html">Start a conversation <span aria-hidden="true">→</span></a>
+          <a class="btn btn-ghost" href="services.html">See what we do</a>
+        </div>
+        <p class="fine"><span>Founder-led, no handoffs</span><span>Evidence before recommendations</span><span>India, US, UK and GCC markets</span></p>
+      </div>
+      <div class="portrait">
+        <div class="frame"><img src="ayushi.jpg" alt="Ayushi Gupta, founder of Traxn, speaking on a panel about go-to-market for startups" width="826" height="1032" fetchpriority="high"></div>
+        <div class="tag"><strong>Ayushi Gupta</strong>Founder. Leads every engagement.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="problems">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The problem</p>
+        <h2>Most marketing problems are clarity problems in disguise.</h2>
+        <p>Teams spend on channels, content and tools before they agree on who the customer is and why they should choose you. Tick the ones that sound like this quarter.</p>
+      </div>
+      <div class="checks">
+        <button class="check" type="button" aria-pressed="false"><span class="box" aria-hidden="true"></span><q>Visitors read our homepage and still ask what we do.</q></button>
+        <button class="check" type="button" aria-pressed="false"><span class="box" aria-hidden="true"></span><q>Sales, product and marketing each describe the product differently.</q></button>
+        <button class="check" type="button" aria-pressed="false"><span class="box" aria-hidden="true"></span><q>We're chasing three segments and winning none of them.</q></button>
+        <button class="check" type="button" aria-pressed="false"><span class="box" aria-hidden="true"></span><q>The pitch works at home but doesn't land in the US or UK.</q></button>
+        <button class="check" type="button" aria-pressed="false"><span class="box" aria-hidden="true"></span><q>Plenty of activity and traffic, but pipeline isn't growing.</q></button>
+        <button class="check" type="button" aria-pressed="false"><span class="box" aria-hidden="true"></span><q>ChatGPT and Perplexity recommend our competitors, not us.</q></button>
+      </div>
+      <p class="check-out" id="check-out" aria-live="polite">Nothing ticked yet.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What we do</p>
+        <h2>Four services. One line of thinking.</h2>
+        <p>Each one starts with customer evidence and ends with decisions your team can act on.</p>
+      </div>
+      <div class="grid-2">
+        <a class="card" href="positioning.html">
+          <span class="pill">Positioning</span>
+          <h3>Brand and product positioning</h3>
+          <p>Decide who you serve, what you replace and why you win, then say it in words buyers recognise.</p>
+          <p class="chain"><span>Customer understanding</span><i>→</i><span>Differentiation</span><i>→</i><span>Value proposition</span><i>→</i><span>Messaging</span></p>
+          <span class="link go">Explore positioning</span>
+        </a>
+        <a class="card" href="gtm.html">
+          <span class="pill">Go-to-market</span>
+          <h3>Go-to-market strategy</h3>
+          <p>Choose the markets and segments worth winning, plan the launch and get sales and marketing telling one story.</p>
+          <p class="chain"><span>Market selection</span><i>→</i><span>Audience priorities</span><i>→</i><span>Launch planning</span><i>→</i><span>Sales alignment</span></p>
+          <span class="link go">Explore go-to-market</span>
+        </a>
+        <a class="card" href="demand.html">
+          <span class="pill">Growth</span>
+          <h3>Demand generation and growth</h3>
+          <p>Build demand programmes that match how your buyers actually research and buy, and measure what moves pipeline.</p>
+          <p class="chain"><span>Demand strategy</span><i>→</i><span>Campaigns</span><i>→</i><span>Conversion</span><i>→</i><span>Measurement</span></p>
+          <span class="link go">Explore demand generation</span>
+        </a>
+        <a class="card" href="ai-search.html">
+          <span class="pill">AI search</span>
+          <h3>AI search and content visibility</h3>
+          <p>Understand how AI assistants and search engines describe your category, and earn a place in the answers.</p>
+          <p class="chain"><span>Search research</span><i>→</i><span>Expert content</span><i>→</i><span>Discoverability</span><i>→</i><span>Visibility measurement</span></p>
+          <span class="link go">Explore AI search visibility</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Why Traxn</p>
+        <h2>What we believe about marketing.</h2>
+        <p>These beliefs shape every recommendation we make. If they don't match how you think, we're probably not the right partner, and we'd rather you know now.</p>
+      </div>
+      <div class="beliefs">
+        <div class="belief"><span class="n">Belief 01</span><h3>Better marketing starts with better questions.</h3><p>Most briefs ask "how do we get more leads?" The useful question is usually "who is choosing us today, and why?" We start there.</p></div>
+        <div class="belief"><span class="n">Belief 02</span><h3>Clarity over complexity.</h3><p>A strategy that fits on one page gets used. A 60-slide deck gets filed. We'd rather give you three decisions than thirty recommendations.</p></div>
+        <div class="belief"><span class="n">Belief 03</span><h3>Evidence over assumptions.</h3><p>Customer calls, lost-deal notes, review sites and search data tell you more than any workshop. We bring the evidence before we bring opinions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it works</p>
+        <h2>Understand. Define. Build. Learn.</h2>
+        <p>Every engagement, whatever its size, moves through the same four stages. The order matters: skip one and the ones after it get weaker.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="k">Stage 1</span><h3>Understand</h3><p>Research the business, its customers and its market. Calls, reviews, lost deals, competitor messaging, search and AI answers.</p><p class="out"><b>You get:</b> what buyers actually say, and why they choose you.</p></div>
+        <div class="step"><span class="k">Stage 2</span><h3>Define</h3><p>Name the real problem and rank the opportunities by how much they're worth and how hard they are.</p><p class="out"><b>You get:</b> one problem statement everyone agrees with.</p></div>
+        <div class="step"><span class="k">Stage 3</span><h3>Build</h3><p>Create the strategy and a roadmap with owners, dates and the first things to ship.</p><p class="out"><b>You get:</b> a plan your team can start on Monday.</p></div>
+        <div class="step"><span class="k">Stage 4</span><h3>Learn</h3><p>Measure what moved, cut what didn't, and refine the next decision with better data.</p><p class="out"><b>You get:</b> a review that ends in one clear next step.</p></div>
+      </div>
+      <p style="margin-top:28px"><a class="link" href="approach.html">Read about our approach in detail</a></p>
+    </div>
+  </section>
+
+  <section class="sec alt" id="who">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Who we help</p>
+        <h2>Built for teams at a turning point.</h2>
+      </div>
+      <div class="who">
+        <ul>
+          <li><span><strong>B2B SaaS and AI companies</strong> from seed to Series B, typically ₹5 crore to ₹100 crore (or $1M to $15M) in revenue.</span></li>
+          <li><span><strong>Founder-led teams</strong> whose product has outgrown the story they tell about it.</span></li>
+          <li><span><strong>Companies entering a new market</strong>, especially between India and the US, UK or UAE/GCC.</span></li>
+          <li><span><strong>Marketing leaders</strong> who need a strategic partner, not another pair of hands for execution.</span></li>
+          <li><span><strong>Teams with activity but no traction</strong>, where the fix is in the thinking, not the volume.</span></li>
+        </ul>
+        <div class="not">
+          <h3>When we're not the right fit</h3>
+          <p>If you need a full execution agency for ads, design and video, or a brand identity from scratch, we'll say so and point you to people who do that well. Traxn does the strategic work and the first layer of execution that proves it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="proof">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Proof of expertise</p>
+        <h2>Evidence, clearly labelled.</h2>
+        <p>We publish only results a client has approved. Until then, you can judge our thinking by the analyses and research we put out in public.</p>
+      </div>
+      <div class="proof">
+        <a class="card" href="case-studies.html">
+          <span class="pill line">Sample analysis</span>
+          <h3>How an Indian SaaS pitch should change for UK buyers</h3>
+          <p>A worked example: the same product, two markets, two different alternatives in the buyer's head and two different messages. Clearly marked as illustrative, not client work.</p>
+          <span class="link go">Read the analysis</span>
+        </a>
+        <a class="card" href="case-studies.html#research">
+          <span class="pill line">Original research</span>
+          <h3>What AI assistants say about B2B SaaS categories</h3>
+          <p>We test how ChatGPT, Perplexity and Gemini answer buyer prompts across SaaS categories, and publish what we find. The method and limits are explained alongside the results.</p>
+          <span class="link go">See the research</span>
+        </a>
+      </div>
+      <p class="notice" style="margin-top:18px"><b>Honesty note.</b><span>Traxn is a new consultancy. Published client case studies will appear here as engagements complete and clients give permission. Nothing on this site presents hypothetical outcomes as client results.</span></p>
+    </div>
+  </section>
+
+  <section class="sec alt" id="testimonials">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What clients say</p>
+        <h2>In their words.</h2>
+      </div>
+      <div class="quotes">
+        <div class="quote slot"><p class="eyebrow">Testimonial slot 1</p><p>Reserved for feedback from a positioning or go-to-market engagement. Will be published with the client's name, role and company, with their permission.</p></div>
+        <div class="quote slot"><p class="eyebrow">Testimonial slot 2</p><p>Reserved for feedback from a demand generation or growth engagement.</p></div>
+        <div class="quote slot"><p class="eyebrow">Testimonial slot 3</p><p>Reserved for feedback from a market-entry engagement.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="insights">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Insights</p>
+        <h2>Thinking we've put in writing.</h2>
+      </div>
+      <div class="posts">
+        <a class="post" href="insights.html#positioning-three-segments">
+          <span class="k">Positioning and differentiation</span>
+          <h3>Why "we serve three segments" usually means you serve none</h3>
+          <p>The maths of focus: how splitting a small team's attention across segments quietly halves your win rate in each.</p>
+          <span class="by">Ayushi Gupta · In preparation</span>
+        </a>
+        <a class="post" href="insights.html#india-to-us">
+          <span class="k">GTM and market strategy</span>
+          <h3>The five things that change when an Indian SaaS company sells to the US</h3>
+          <p>Alternatives, proof, pricing anchors, buying committees and tone. A checklist from the Understand stage.</p>
+          <span class="by">Ayushi Gupta · In preparation</span>
+        </a>
+        <a class="post" href="insights.html#ai-answers">
+          <span class="k">AI, search and discovery</span>
+          <h3>What happens when the buyer asks ChatGPT instead of Google</h3>
+          <p>How AI assistants pick which vendors to name, what that means for content, and how to measure your own visibility.</p>
+          <span class="by">Ayushi Gupta · In preparation</span>
+        </a>
+      </div>
+      <p style="margin-top:24px"><a class="link" href="insights.html">All insights</a></p>
+    </div>
+  </section>
+
+  <section class="sec" id="contact-cta">
+    <div class="wrap">
+      <div class="final">
+        <p class="eyebrow">Let's talk</p>
+        <h2>Bring us the challenge you keep circling back to.</h2>
+        <p>Tell us where you are, what you're trying to achieve and what's getting in the way. We'll start there, and we'll tell you plainly if we're not the right fit.</p>
+        <div class="row">
+          <a class="btn btn-primary" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="approach.html">How an engagement works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="site.js"></script>
+<script>
+(function(){
+  var checks = document.querySelectorAll('.check'), out = document.getElementById('check-out');
+  var msgs = {
+    0:'Nothing ticked yet.',
+    1:'One is enough to start. Most of our clients came with exactly one of these.',
+    2:'Two usually share a root cause: the story. Positioning is where we\'d start.',
+    3:'Three or more and it\'s rarely a channel problem. Let\'s talk before you spend more on growth.'
+  };
+  checks.forEach(function(b){
+    b.addEventListener('click', function(){
+      var on = b.getAttribute('aria-pressed') === 'true';
+      b.setAttribute('aria-pressed', on ? 'false' : 'true');
+      var n = document.querySelectorAll('.check[aria-pressed="true"]').length;
+      out.textContent = msgs[Math.min(n,3)];
+    });
+  });
+})();
+</script>
+</body>
+</html>
