@@ -4,6 +4,7 @@
   var links = [
     ['services.html','What We Do'],
     ['approach.html','Our Approach'],
+    ['opportunities.html','Opportunities'],
     ['case-studies.html','Case Studies'],
     ['insights.html','Insights'],
     ['about.html','About']
@@ -33,6 +34,7 @@
           '<li><a href="ai-search.html">AI search and content visibility</a></li></ul></div>' +
         '<div><h4>Company</h4><ul>' +
           '<li><a href="approach.html">Our approach</a></li>' +
+          '<li><a href="opportunities.html">Opportunities</a></li>' +
           '<li><a href="case-studies.html">Case studies</a></li>' +
           '<li><a href="insights.html">Insights</a></li>' +
           '<li><a href="about.html">About</a></li>' +

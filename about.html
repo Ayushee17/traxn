@@ -17,6 +17,19 @@
 @media (max-width:760px){.founder{grid-template-columns:1fr}.founder .photo{max-width:260px}}
 .principles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 @media (max-width:700px){.principles{grid-template-columns:1fr}}
+.standfirst{font-size:clamp(19px,2vw,23px);line-height:1.45;color:var(--ink);font-family:var(--display);font-weight:500;letter-spacing:-0.01em}
+.facts{margin:26px 0 0;padding:20px 22px;background:var(--bg);border:1px solid var(--line);border-radius:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px 26px}
+.facts div{display:grid;gap:3px}
+.facts dt{font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--orange);font-weight:600}
+.facts dd{margin:0;font-size:16px;color:var(--ink);font-weight:600}
+@media (max-width:560px){.facts{grid-template-columns:1fr}}
+.xp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.xp .card{display:grid;gap:10px;align-content:start}
+.xp .card h3{font-size:20px}
+.xp .card p{color:var(--ink-2);font-size:16px;margin:0}
+.xp .pill{justify-self:start}
+@media (max-width:900px){.xp{grid-template-columns:1fr 1fr}}
+@media (max-width:620px){.xp{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -81,11 +94,19 @@
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow">The founder</p><h2>Ayushi Gupta</h2></div>
       <div class="founder">
-        <div class="photo"><img src="ayushi.jpg" alt="Ayushi Gupta, founder of Traxn, speaking at a startup go-to-market event" width="826" height="1032" loading="lazy"></div>
+        <div class="photo"><img src="ayushi.jpg" alt="Ayushi Gupta, founder of Traxn" width="640" height="640" loading="lazy"></div>
         <div class="prose">
-          <p>Ayushi founded Traxn after a career in product marketing and go-to-market for B2B SaaS and AI companies, working on positioning, launches, demand generation and growth, and on taking Indian products into the US, UK and Gulf markets.</p>
-          <p>She leads every Traxn engagement herself and joins every working session. There are no account managers and no handoffs: the person who does the research is the person who presents the recommendation.</p>
-          <p>Outside client work she speaks on go-to-market (including eChai Ventures' GTM and Distribution for Startups in Bengaluru) and writes <em>Human in the Loop</em>, a newsletter on AI and the future of work.</p>
+          <p class="standfirst">Ayushi has sat through the same meeting more times than she can count: a room of capable people arguing about channels, budgets and campaign calendars, when the real disagreement was that nobody could say, in one sentence, who the product was for.</p>
+          <p>She founded Traxn to start at the other end of that conversation. Her career has been spent in product marketing and go-to-market inside B2B SaaS and AI companies — positioning, launches, demand generation and growth — and in the particular problem of taking Indian products into the US, UK and Gulf markets, where the product stays the same and almost everything about the story has to change.</p>
+          <p>That work left her with a conviction that runs through everything Traxn does: the expensive mistakes in marketing are rarely execution mistakes. They are decisions nobody made, postponed until a campaign calendar quietly makes them by default.</p>
+          <p>She leads every Traxn engagement herself and joins every working session. There are no account managers and no handoffs: the person who does the research is the person who presents the recommendation, and the person who will still be there when you want to argue with it.</p>
+          <p>Outside client work she speaks on go-to-market — including eChai Ventures' <em>GTM and Distribution for Startups</em> in Bengaluru — and writes <em>Human in the Loop</em>, a newsletter on AI and the future of work.</p>
+          <dl class="facts">
+            <div><dt>Based in</dt><dd>Bengaluru, India</dd></div>
+            <div><dt>Works across</dt><dd>India, US, UK and GCC markets</dd></div>
+            <div><dt>Focus</dt><dd>B2B SaaS and AI, seed to Series B</dd></div>
+            <div><dt>Writes</dt><dd>Human in the Loop</dd></div>
+          </dl>
           <div class="links">
             <a class="btn btn-ghost" href="https://www.linkedin.com/in/ayushigupta-pmm/" target="_blank" rel="noopener">Ayushi on LinkedIn ↗</a>
             <a class="btn btn-ghost" href="insights.html">Read her writing</a>
@@ -95,7 +116,45 @@
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec" id="experience">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Experience</p><h2>Where the thinking comes from.</h2><p>Traxn is a new consultancy, but it isn't a standing start. These are the kinds of problems this experience was built on, in-house, before it became advisory work. Named clients and employers appear only where they've agreed to be named.</p></div>
+      <div class="xp">
+        <div class="card">
+          <span class="pill">Products</span>
+          <h3>B2B SaaS and AI</h3>
+          <p>Software sold to businesses rather than consumers, including products where an AI capability is the thing being sold and the thing buyers are most nervous about.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Stages</span>
+          <h3>Seed to Series B</h3>
+          <p>Companies past product-market fit and into the harder question of who to focus on, typically ₹5 crore to ₹100 crore in revenue, where one wrong segment choice costs a year.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Markets</span>
+          <h3>India, US, UK and GCC</h3>
+          <p>Selling at home and outward, with the recurring problem of a pitch that works in Bengaluru and lands flat in London, New York or Dubai.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Functions</span>
+          <h3>Positioning and launches</h3>
+          <p>Deciding what a product is, who it replaces and why anyone should switch, then getting sales, product and marketing to say the same thing without being told to.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Functions</span>
+          <h3>Demand and growth</h3>
+          <p>Building programmes that match how buyers actually research, and measurement honest enough to tell you which ones to stop.</p>
+        </div>
+        <div class="card">
+          <span class="pill">Rooms</span>
+          <h3>Founder and exec conversations</h3>
+          <p>Presenting uncomfortable evidence to the people who chose the strategy being questioned, and getting a decision out of the room rather than a follow-up meeting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt">
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow">Working principles</p><h2>How we work with clients.</h2></div>
       <div class="principles">

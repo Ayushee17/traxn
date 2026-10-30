@@ -14,6 +14,8 @@
 .themes button{font:inherit;font-size:14px;font-weight:600;border:1.5px solid var(--line);background:var(--card);color:var(--ink-2);border-radius:999px;padding:8px 16px;cursor:pointer}
 .themes button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .post .status{font-size:12px;font-family:var(--mono);color:var(--ink-2)}
+.post h3 a{color:inherit;text-decoration:none}
+.post h3 a:hover{color:var(--orange)}
 .post .next{font-size:14px;color:var(--orange);font-weight:700}
 .cats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
 .cat{border-top:3px solid var(--orange);padding-top:12px;display:grid;gap:4px;font-size:14.5px;min-width:0}
@@ -57,21 +59,21 @@
         <button type="button" data-t="ai" aria-pressed="false">AI and discovery</button>
         <button type="button" data-t="ana" aria-pressed="false">Analysis</button>
       </div>
-      <p class="notice" style="margin-bottom:22px"><b>Status.</b><span>Traxn is new and these pieces are being written. Each card shows the argument and what the piece will contain; the full article, author and publication date appear when it's published.</span></p>
+      <p class="notice" style="margin-bottom:22px"><b>Status.</b><span>Two pieces are published and carry a date and a read time. The rest show the argument and what the piece will contain; each becomes a full article as it's written. We publish when we have something to say, not on a schedule.</span></p>
       <div class="posts" id="posts">
         <article class="post" data-t="pos" id="positioning-three-segments">
           <span class="k">Positioning and differentiation</span>
-          <h3>Why "we serve three segments" usually means you serve none</h3>
-          <p>The maths of focus for a small team: how splitting attention across segments quietly halves the win rate in each, with a worked example from a composite SaaS company and a way to choose the first segment in an afternoon.</p>
-          <span class="status">Ayushi Gupta · In preparation</span>
-          <a class="next" href="positioning.html">Related service: positioning →</a>
+          <h3><a href="insight-three-segments.html">Why "we serve three segments" usually means you serve none</a></h3>
+          <p>The arithmetic of focus for a small team: how splitting attention across segments quietly collapses the win rate in each, why the damage stays invisible, and a four-question way to choose the first segment in an afternoon.</p>
+          <span class="status">Ayushi Gupta · 22 October 2026 · 7 min read</span>
+          <a class="next" href="insight-three-segments.html">Read the piece →</a>
         </article>
         <article class="post" data-t="gtm" id="india-to-us">
           <span class="k">GTM and market strategy</span>
-          <h3>The five things that change when an Indian SaaS company sells to the US</h3>
-          <p>Alternatives, proof, pricing anchors, buying committees and tone. A checklist from the Understand stage, with the questions to ask before the first US campaign.</p>
-          <span class="status">Ayushi Gupta · In preparation</span>
-          <a class="next" href="gtm.html">Related service: go-to-market →</a>
+          <h3><a href="insight-india-to-us.html">The five things that change when an Indian SaaS company sells to the US</a></h3>
+          <p>Alternatives, proof, pricing anchors, buying committees and tone. What actually moves when the product crosses the ocean unchanged, with the question to ask before each of the five.</p>
+          <span class="status">Ayushi Gupta · 22 October 2026 · 9 min read</span>
+          <a class="next" href="insight-india-to-us.html">Read the piece →</a>
         </article>
         <article class="post" data-t="dem" id="measure-small-team">
           <span class="k">B2B demand generation</span>

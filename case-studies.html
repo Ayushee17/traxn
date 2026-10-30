@@ -18,6 +18,18 @@
 .compare dd{margin:0;color:var(--ink-2)}
 @media (max-width:640px){.compare{grid-template-columns:1fr}}
 .template dl div{grid-template-columns:140px 1fr}
+.modelled{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;background:var(--orange);color:var(--on-orange);border-radius:999px;padding:2px 7px;margin-left:6px;vertical-align:1px}
+.case dd b{color:var(--ink)}
+.case dd.reserved{font-style:italic;opacity:.75}
+/* "Who does this work" band */
+.whodoes{display:grid;grid-template-columns:.62fr 1.38fr;gap:clamp(24px,4vw,56px);align-items:center}
+.whodoes .shot{border-radius:20px;overflow:hidden;aspect-ratio:4/5;background:var(--peach-soft)}
+.whodoes .shot img{width:100%;height:100%;object-fit:cover;object-position:50% 25%}
+@media (max-width:820px){.whodoes{grid-template-columns:1fr}.whodoes .shot{max-width:300px;aspect-ratio:1/1}}
+/* Optional photo inside a case card: add <div class="shot"><img ...></div> as the
+   first child of .meta. Sized to sit above the pill and metadata. */
+.case .meta .shot{border-radius:12px;overflow:hidden;aspect-ratio:4/3;background:var(--peach-soft);margin-bottom:4px}
+.case .meta .shot img{width:100%;height:100%;object-fit:cover;display:block}
 </style>
 </head>
 <body>
@@ -53,9 +65,27 @@
     </div>
   </section>
 
-  <section class="sec" id="samples">
+  <section class="sec" id="method">
     <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">Sample analyses</p><h2>Illustrative projects.</h2><p>These are worked examples built from public information and our own experience, not client engagements. They show the method. They don't claim results.</p></div>
+      <div class="whodoes">
+        <div class="shot"><img src="ayushi-speaking.jpg" alt="Ayushi Gupta, founder of Traxn, speaking at a go-to-market event in Bengaluru" width="826" height="1032" loading="lazy"></div>
+        <div>
+          <p class="eyebrow">Who does this work</p>
+          <h2 style="font-size:clamp(26px,3.2vw,40px);margin:10px 0 16px">The person who writes the analysis is the person in the room.</h2>
+          <p style="color:var(--ink-2);font-size:18px">Every analysis on this page was researched and written by Ayushi, who leads each engagement herself. There are no account managers and no handoffs, so the reasoning you read here is the reasoning you'll get on a call — and you can argue with it directly.</p>
+          <p style="color:var(--ink-2);font-size:18px">That's also why these cases carry their assumptions on the surface. Work you can interrogate is worth more than work you have to take on trust.</p>
+          <div class="row" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+            <a class="btn btn-ghost" href="about.html">More about Ayushi</a>
+            <a class="btn btn-ghost" href="approach.html">How an engagement works</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec alt" id="samples">
+    <div class="wrap">
+      <div class="sec-head"><p class="eyebrow">Sample analyses</p><h2>Illustrative projects.</h2><p>Worked examples built from public information and our own experience, not client engagements. They show the method on real problems. Where a figure appears it is <b>modelled and labelled as such</b>, with its assumptions written out — none of it is a result any client achieved, and we would rather show you the reasoning than borrow someone else's numbers.</p></div>
       <div class="cases">
         <article class="case" id="sample-uk">
           <div class="meta"><span class="pill">Illustrative · not client work</span><span class="k">Positioning · Market entry</span><p>A composite scenario: an Indian contract-management SaaS, ₹20 crore revenue, preparing a UK launch.</p></div>
@@ -87,11 +117,79 @@
             <p style="margin-top:16px"><a class="link" href="demand.html">How we do this in a demand engagement</a></p>
           </div>
         </article>
+        <article class="case" id="sample-ai-pricing">
+          <div class="meta"><span class="pill">Illustrative · not client work</span><span class="k">Positioning · AI products</span><p>A composite scenario: a Series A AI company whose demo consistently impressed and whose deals consistently stalled.</p></div>
+          <div>
+            <h3>The demo that wowed, and the deal that died in procurement</h3>
+            <p>Every first call went well. Prospects called the product "magic". Then the second call never got booked, or it got booked with someone who asked questions the founder couldn't answer: where does the data go, what happens when it's wrong, who signs off on it. The company read this as a sales problem and hired two more AEs. It was a positioning problem.</p>
+            <div class="compare">
+              <div><h4>What the company sold</h4><dl><div><dt>Framing</dt><dd>A breakthrough in capability</dd></div><div><dt>Hero moment</dt><dd>The output, generated live</dd></div><div><dt>Champion</dt><dd>An enthusiast who loved the demo</dd></div><div><dt>Unanswered</dt><dd>Accuracy, liability, data residency, rollback</dd></div></dl></div>
+              <div><h4>What the buyer was buying</h4><dl><div><dt>Framing</dt><dd>A change to an existing workflow, with a new failure mode</dd></div><div><dt>Hero moment</dt><dd>What happens on the day it gets something wrong</dd></div><div><dt>Champion</dt><dd>Someone who must defend the decision internally</dd></div><div><dt>Required</dt><dd>An audit trail and a human checkpoint</dd></div></dl></div>
+            </div>
+            <dl>
+              <div><dt>Insight</dt><dd>The enthusiasm in call one and the silence after it came from two different people. The demo converted an individual; the purchase required a committee that had never seen the demo and was assessing risk, not capability.</dd></div>
+              <div><dt>Strategy</dt><dd>Stop selling the output and start selling the control surface around it: confidence scores, the review step, what the system refuses to do. Reposition against the honest alternative, which was not a competitor but "keep doing it manually and avoid the risk".</dd></div>
+              <div><dt>Learning</dt><dd>For AI products, the differentiator that closes deals is rarely the model. It is the evidence that someone has thought carefully about being wrong. Capability wins the first meeting; accountability wins the contract.</dd></div>
+            </dl>
+            <p style="margin-top:16px"><a class="link" href="positioning.html">How we do this in a positioning engagement</a></p>
+          </div>
+        </article>
+        <article class="case" id="sample-gcc">
+          <div class="meta"><span class="pill">Illustrative · not client work</span><span class="k">Go-to-market · GCC entry</span><p>A composite scenario: an Indian B2B SaaS company treating the UAE as "an easier US".</p></div>
+          <div>
+            <h3>Why the Gulf is not a smaller version of your US plan</h3>
+            <p>The reasoning sounds right: English-speaking, business-friendly, short flight, high willingness to pay. So the team reused the US playbook — inbound content, a self-serve trial, a pricing page in dollars — and waited. Traffic came. Pipeline did not.</p>
+            <dl>
+              <div><dt>Insight</dt><dd>The US plan assumed a buyer who researches privately, trials alone and arrives at sales pre-convinced. In the Gulf, the composite pattern ran the other way: introductions carried more weight than content, the first meeting was expected in person or by phone rather than as a form fill, and a local presence or partner was treated as a signal of permanence, not a nice-to-have.</dd></div>
+              <div><dt>Strategy</dt><dd>Invert the funnel for the market. Lead with partnerships and referenced introductions rather than inbound. Replace the self-serve trial with a guided pilot. Answer the questions that actually gate the deal — data residency, local entity, Arabic support, procurement cycles tied to the government calendar — on the page, before anyone has to ask.</dd></div>
+              <div><dt>Learning</dt><dd>Market entry fails most often where the market looks familiar. Genuine difference gets researched; apparent similarity gets assumed. The UAE punishes that assumption more quietly than a hard market would, because the traffic still arrives and only the pipeline is missing.</dd></div>
+            </dl>
+            <p style="margin-top:16px"><a class="link" href="gtm.html">How we do this in a go-to-market engagement</a></p>
+          </div>
+        </article>
+
+        <article class="case" id="sample-hr-reset">
+          <div class="meta"><span class="pill">Illustrative · not client work</span><span class="k">Positioning · Full engagement</span><p>A composite scenario: a 60-person HR tech company, ₹38 crore ARR, where the win rate looked healthy and pipeline was shrinking quarter on quarter.</p></div>
+          <div>
+            <h3>The company that was winning deals and losing the market</h3>
+            <p>This one is written in the full structure we use for published client cases, so you can see the shape of the work end to end. Every number below is modelled, not measured, and the assumptions are shown.</p>
+            <dl>
+              <div><dt>Context</dt><dd>A mid-market HR platform, nine years old, profitable, selling payroll and compliance to Indian companies of 200–2,000 staff. The board had asked for a path to doubling ARR in eight quarters.</dd></div>
+              <div><dt>Challenge</dt><dd>Win rate on qualified opportunities sat around 34%, which the team read as proof the product was strong. But the number of qualified opportunities had fallen for three consecutive quarters while marketing spend held flat. The internal explanation was "the market has slowed".</dd></div>
+              <div><dt>Insight</dt><dd>Interviews with recent losses and, more usefully, with buyers who never engaged at all, surfaced the real pattern: the company was winning the deals where it was already shortlisted, and almost never being shortlisted in the first place. The high win rate wasn't evidence of strength — it was evidence of a narrow top of funnel flattering the average. Prospects consistently described the category as "payroll software", while the company described itself as "a people operations platform", a phrase no buyer used in any of the conversations.</dd></div>
+              <div><dt>Strategy</dt><dd>Reposition into the category buyers actually searched for and asked peers about, and differentiate inside it rather than above it. Lead with compliance confidence — the thing losses said kept them awake — instead of breadth of modules, which every competitor also claimed. Rejected: a new category definition ("people ops"), which would have required educating the market the company could least afford to educate, and a price cut, which addressed a symptom nobody had raised.</dd></div>
+              <div><dt>Execution</dt><dd>Three weeks of research and definition, then a four-week build: homepage and two product pages rewritten against the new category, sales deck and discovery questions realigned, and a one-page internal positioning brief so product, sales and marketing described it identically. The first measurable change was the words, not the spend.</dd></div>
+              <div><dt>Results <span class="modelled">Modelled</span></dt><dd>If being described in the buyer's own category language lifts shortlist rate from 1 in 9 inbound conversations to 1 in 5 — the shift the interviews suggested was available — qualified opportunities roughly double at flat spend. At a steady 34% win rate that is the board's growth target without a single new channel. <b>Assumptions:</b> spend, pricing, sales headcount and win rate all held constant; only shortlist rate moves. A real engagement would measure this over two quarters before claiming it.</dd></div>
+              <div><dt>Learning</dt><dd>A high win rate is one of the most dangerous numbers in B2B marketing, because it looks like success and can be a symptom of invisibility. Always read it against the volume of opportunities that produced it. If you win most of the deals you're in and the pipeline is still shrinking, the problem is upstream of sales and no amount of sales improvement will reach it.</dd></div>
+              <div><dt>Client's words</dt><dd class="reserved">Reserved. Quotes appear here only on published client cases, with a name, role and company, and only once the client has approved the wording in writing.</dd></div>
+            </dl>
+            <p style="margin-top:16px"><a class="link" href="positioning.html">How we do this in a positioning engagement</a></p>
+          </div>
+        </article>
+
+        <article class="case" id="sample-ai-visibility">
+          <div class="meta"><span class="pill">Illustrative · not client work</span><span class="k">AI search · Visibility</span><p>A composite scenario: a well-regarded customer support SaaS that had stopped appearing in the answers its buyers were now asking for.</p></div>
+          <div>
+            <h3>Invisible to the assistant, and nobody noticed for two quarters</h3>
+            <p>Search traffic was stable, rankings were stable, and demo requests were quietly declining. The dashboards showed nothing wrong because they were not measuring the surface where buyers had moved.</p>
+            <dl>
+              <div><dt>Context</dt><dd>A support-desk product with strong G2 reviews and solid organic rankings for its main category terms, selling to support leads at companies of 100–1,000 staff in India and the UK.</dd></div>
+              <div><dt>Challenge</dt><dd>Sales began hearing "we had a shortlist already" more often, and the shortlists named two competitors the team considered weaker. Nothing in analytics explained it: the site's rankings hadn't moved.</dd></div>
+              <div><dt>Insight</dt><dd>Running twenty buyer-phrased prompts across three assistants, three times each, the company was named in a small minority of answers — and when it was named, it was described by a secondary feature rather than its actual strength. The competitors that dominated the answers didn't rank better in search. They were simply <em>described</em> more often in the kind of sources assistants lean on: comparison pages, review-site summaries, forum threads and analyst-style roundups, rather than their own marketing pages.</dd></div>
+              <div><dt>Strategy</dt><dd>Stop optimising the homepage for the assistant and start producing the material the assistant reads about you. Specifically: structured comparison content answering the exact questions buyers were putting to the assistant, factual and checkable claims in place of adjectives, and consistency of category language everywhere the company appeared off-site. Rejected: keyword-style "AI SEO" tactics, which assume the assistant works like a search engine and mostly waste a quarter.</dd></div>
+              <div><dt>Execution</dt><dd>A two-week visibility snapshot establishing the baseline with the full prompt set published, then a content plan scoped to one quarter, then re-measurement with the identical prompts on the same schedule.</dd></div>
+              <div><dt>Results <span class="modelled">Modelled</span></dt><dd>The honest version: visibility in AI answers is measurable and movable, but noisy. A reasonable target for one quarter is to go from named-in-a-minority to named-in-most answers for your core prompts, and — often more valuable — to be described <em>correctly</em> when named. <b>Assumptions:</b> same prompts, same assistants, same cadence, results read as a repeatable sample rather than a ranking. Anyone promising you a guaranteed position in an AI answer is selling something that cannot be bought.</dd></div>
+              <div><dt>Learning</dt><dd>You can hold every search ranking you've ever had and still disappear from the shortlist, because a growing share of research now ends in an answer rather than a results page. The first move isn't to produce more content — it's to measure what the assistants currently say about you, which almost no company has actually checked.</dd></div>
+              <div><dt>Client's words</dt><dd class="reserved">Reserved. Quotes appear here only on published client cases, with a name, role and company, and only once the client has approved the wording in writing.</dd></div>
+            </dl>
+            <p style="margin-top:16px"><a class="link" href="ai-search.html">How we do this in an AI search engagement</a></p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="sec alt" id="research">
+  <section class="sec" id="research">
     <div class="wrap">
       <div class="sec-head"><p class="eyebrow">Original research</p><h2>What AI assistants say about B2B SaaS categories.</h2><p>An ongoing study. We run a fixed set of buyer prompts across ChatGPT, Perplexity and Gemini and record which vendors are named, how they're described and which sources the answers draw on.</p></div>
       <div class="grid-3">
@@ -103,7 +201,7 @@
     </div>
   </section>
 
-  <section class="sec">
+  <section class="sec alt">
     <div class="wrap">
       <div class="final">
         <p class="eyebrow">Discuss a similar challenge</p>
