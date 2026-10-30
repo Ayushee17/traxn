@@ -1,4 +1,4 @@
-# Traxn — https://YOUR-DOMAIN/
+# Traxn — https://traxnbyayushi.com/
 User-agent: *
 Allow: /
 
@@ -28,4 +28,4 @@ Allow: /
 User-agent: Applebot-Extended
 Allow: /
 
-Sitemap: https://YOUR-DOMAIN/sitemap.xml
+Sitemap: https://traxnbyayushi.com/sitemap.xml
